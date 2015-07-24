@@ -2,8 +2,8 @@ trafiklab-widget
 ================
 
 A simple GTK app for displaying time until next bus in
-Stockholm's public transportation system making use of the
-[TrafikLab](https://www.trafiklab.se/)'s.
+Stockholm's public transportation system, making use of the
+[TrafikLab](https://www.trafiklab.se/)'s API.
 
 
 Usage
@@ -20,7 +20,10 @@ browser
 "https://api.trafiklab.se/samtrafiken/resrobot/FindLocation.json?apiVersion=2.1&from=$SEARCH&coordSys=RT90&key=$APIKEY"
 ```
 
-Install
+Look for the `locationid` where it matches your `displayname`.
+
+
+Install gem:
    
 ```bash
 git clone https://github.com/eyeinsky/trafiklab-widget.git
@@ -29,7 +32,7 @@ gem build trafiklab-widget.gemspec
 gem install trafiklab-widget-[VERSION].gem
 ```
 
-Create your script and run it
+Create script:
 
 ```ruby
 require 'trafiklab-widget'
@@ -51,7 +54,7 @@ Add script to path, create keyboard shortcut, etc.
 Notes
 =====
 
-Runs a borderless window -- ALT+click to move.
+Runs a borderless window -- ALT+click to move it around.
 
 Tested on Debian/Xfce4.
 
